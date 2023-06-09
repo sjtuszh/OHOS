@@ -1,0 +1,17 @@
+{
+  "data": {
+    "title": "Title",
+    "detail": "Text",
+    "iconTitle": "Picture"
+  },
+  "actions": {
+    "routerEvent": {
+      "action": "router",
+      "bundleName": "com.szh.tutorial",
+      "abilityName": "com.szh.tutorial.MainAbility",
+      "params": {
+        "message": "add detail"
+      }
+    }
+  }
+}
