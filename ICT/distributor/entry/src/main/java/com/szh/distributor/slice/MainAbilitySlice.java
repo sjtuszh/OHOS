@@ -11,9 +11,7 @@ import java.util.ArrayList;
 
 public class MainAbilitySlice extends AbilitySlice {
     static final HiLogLabel slider = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MY_TAG");
-    private PageSlider pageSlider;
     private TabList mtabList;
-    private ArrayList<Component> pageView;
 
     @Override
     public void onStart(Intent intent) {
