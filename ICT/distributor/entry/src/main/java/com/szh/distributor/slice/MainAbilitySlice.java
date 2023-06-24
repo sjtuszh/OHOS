@@ -10,10 +10,9 @@ import ohos.hiviewdfx.HiLogLabel;
 import java.util.ArrayList;
 
 public class MainAbilitySlice extends AbilitySlice {
-    static final HiLogLabel slider = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MY_TAG");
-    private PageSlider pageSlider;
+    static final HiLogLabel ability = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MainAbilitySlice");
     private TabList mtabList;
-    private ArrayList<Component> pageView;
+
 
     @Override
     public void onStart(Intent intent) {
@@ -23,17 +22,18 @@ public class MainAbilitySlice extends AbilitySlice {
 
         //初始化TabList
         mtabList = (TabList) findComponentById(ResourceTable.Id_tab_list);
-        HiLog.info(slider,"初始化TabList");
+        HiLog.info(ability,"初始化TabList");
 
         mtabList.setFixedMode(true);
         String[] tabListTags = {"设备", "应用", "个人中心"};
-        for (String tabListTag : tabListTags) {
+        for (int ntag=0;ntag<=2;ntag++) {
             TabList.Tab tab = mtabList.new Tab(this);
-            tab.setText(tabListTag);
+            tab.setText(tabListTags[ntag]);
             tab.setPadding(12, 0, 12, 0);
+            tab.setTag(ntag);
             mtabList.addTab(tab);
         }
-        mtabList.selectTabAt(2);
+        mtabList.selectTabAt(1);
 
 
     }
