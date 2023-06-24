@@ -42,6 +42,18 @@
         "label": "$string:entry_MainAbility",
         "type": "page",
         "launchType": "standard"
+      },
+      {
+        "backgroundModes": [
+          "dataTransfer",
+          "bluetoothInteraction",
+          "wifiInteraction",
+          "multiDeviceConnection"
+        ],
+        "name": "com.szh.distributor.server",
+        "icon": "$media:icon",
+        "description": "$string:server_description",
+        "type": "service"
       }
     ]
   }
