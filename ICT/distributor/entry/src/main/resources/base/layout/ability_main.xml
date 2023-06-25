@@ -6,6 +6,13 @@
     ohos:alignment="bottom"
     ohos:orientation="vertical">
 
+    <PageSlider
+        ohos:id="$+id:pager_slider"
+        ohos:width="match_parent"
+        ohos:height="0vp"
+        ohos:weight="1"
+        ohos:background_element="#ffffff"/>
+
     <TabList
         ohos:id="$+id:tab_list"
         ohos:tab_margin="24vp"
