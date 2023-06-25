@@ -78,6 +78,7 @@ public class MainAbilitySlice extends AbilitySlice {
 
             @Override
             public void onPageChosen(int i) {
+                //同步tablist
                 mtabList.selectTabAt(i);
             }
         });
