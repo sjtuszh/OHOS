@@ -3,9 +3,20 @@ apply plugin: 'com.huawei.ohos.app'
 
 //For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
 ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_70086000176223007.p12')
+            storePassword '000000187CA7A56ED2A373C9AA804056BA8A507940BCAC80BF7ED0F877EADFAB07CEFBB2E4160D57'
+            keyAlias = 'debugKey'
+            keyPassword '0000001811A31FF3ACA69FE28269E8148F43D1C540BAEAB6C95D13DE857D07D4BB35F32003721F08'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_70086000176223007.p7b')
+            certpath file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_70086000176223007.cer')
+        }
+    }
     compileSdkVersion 7
 }
-	
+
 buildscript {
     repositories {
         maven {

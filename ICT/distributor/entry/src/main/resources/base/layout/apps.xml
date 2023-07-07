@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="bottom"
+    ohos:orientation="vertical">
+
+    <TableLayout
+        xmlns:ohos="http://schemas.huawei.com/res/ohos"
+        ohos:height="match_parent"
+        ohos:width="match_parent"
+        ohos:row_count="5"
+        ohos:column_count="1"
+        ohos:orientation="horizontal"
+        ohos:layout_alignment="center"
+        ohos:alignment_type="align_contents"
+        ohos:margin="8vp">
+
+            <DirectionalLayout
+                ohos:height="match_parent"
+                ohos:width="match_parent"
+                ohos:alignment="horizontal_center"
+                >
+
+
+            <Button
+                ohos:height="100vp"
+                ohos:width="200vp"
+                ohos:text="跑步"
+                ohos:background_element="#888888"
+                ohos:text_size="25fp"
+                ohos:margin="6vp"
+                ohos:shadow_color="#FF7B7E7E"
+                ohos:hint_color="#FFAB0C2B"
+                ohos:enabled="true"
+                />
+
+            <Button
+                ohos:id="$+id:tigan_cloud_btn"
+                ohos:height="100vp"
+                ohos:width="200vp"
+                ohos:text="云体感"
+                ohos:background_element="#888888"
+                ohos:text_size="25fp"
+                ohos:margin="6vp"
+                ohos:shadow_color="#FF7B7E7E"
+                ohos:hint_color="#FFAB0C2B"
+                />
+
+                </DirectionalLayout>
+
+
+
+
+    </TableLayout>
+
+</DirectionalLayout>

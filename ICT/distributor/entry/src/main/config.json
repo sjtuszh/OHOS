@@ -54,6 +54,15 @@
         "icon": "$media:icon",
         "description": "$string:server_description",
         "type": "service"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.szh.distributor.AccessAbility",
+        "icon": "$media:icon",
+        "description": "$string:accessability_description",
+        "label": "$string:entry_AccessAbility",
+        "type": "page",
+        "launchType": "standard"
       }
     ]
   }

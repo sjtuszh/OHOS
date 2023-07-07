@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:id="$+id:layout_player"
+    ohos:height="150vp"
+    ohos:width="150vp"
+    ohos:background_element="$graphic:players_bg_element"
+    ohos:alignment="center">
+
+    <Text
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="玩家位置">
+
+    </Text>
+
+</DirectionalLayout>

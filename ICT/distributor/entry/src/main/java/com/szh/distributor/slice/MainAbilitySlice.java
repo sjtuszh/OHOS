@@ -1,6 +1,7 @@
 package com.szh.distributor.slice;
 
 import com.szh.distributor.ResourceTable;
+import com.szh.distributor.components.AppsItem;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
@@ -14,25 +15,45 @@ import java.util.ArrayList;
 public class MainAbilitySlice extends AbilitySlice {
     static final HiLogLabel ability = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MainAbilitySlice");
     private TabList mtabList;
+    
 
     // PagerSlider对象
     private PageSlider mPagerSlider;
     // 需要PagerSlider对象管理的用户界面列表
     private ArrayList<Component> mPageview;
 
+    //三个界面
+    private DirectionalLayout dl_Devices;
+    private DirectionalLayout dl_Apps;
+    private DirectionalLayout dl_Profiles;
+
+
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
+
+
+        //三种布局
+        Component dl_apps = (DirectionalLayout)LayoutScatter.getInstance(getContext()).parse(ResourceTable.Layout_apps, null, false);
+        Component dl_devices = (DirectionalLayout)LayoutScatter.getInstance(getContext()).parse(ResourceTable.Layout_devices, null, false);
+        Component dl_myProfile = (DirectionalLayout)LayoutScatter.getInstance(getContext()).parse(ResourceTable.Layout_myprofile, null, false);
+
+        //配置devices页面布局
+        
+
+        //配置应用/游戏界面
+
+        //配置个人界面
 
         // 获取PagerSlider对象
         mPagerSlider = (PageSlider) findComponentById(ResourceTable.Id_pager_slider);
 
         // 创建PagerSlider所需要承载界面的列表
         mPageview = new ArrayList<Component>();
-        mPageview.add(generateTextComponent("第1个界面"));
-        mPageview.add(generateTextComponent("第2个界面"));
-        mPageview.add(generateTextComponent("第3个界面"));
+        mPageview.add(dl_devices);
+        mPageview.add(dl_apps);
+        mPageview.add(dl_myProfile);
         // 实例化PageSliderProvider，为PagerSlider提供界面
         mPagerSlider.setProvider(new PageSliderProvider() {
             @Override
@@ -117,7 +138,12 @@ public class MainAbilitySlice extends AbilitySlice {
         });
 
 
+    }
 
+    private DirectionalLayout initAppsLayout(DirectionalLayout dl, AppsItem appsItem) {
+        DirectionalLayout layout = dl;
+
+        return layout;
     }
 
     @Override
@@ -132,13 +158,6 @@ public class MainAbilitySlice extends AbilitySlice {
     }
 
 
-    private Text generateTextComponent(String content) {
-        Text text = new Text(this);
-        text.setLayoutConfig(new ComponentContainer.LayoutConfig(ComponentContainer.LayoutConfig.MATCH_PARENT, ComponentContainer.LayoutConfig.MATCH_PARENT));
-        text.setTextAlignment(TextAlignment.CENTER);
-        text.setText(content);
-        text.setTextSize(80);
-        return text;
-    }
+
 }
 

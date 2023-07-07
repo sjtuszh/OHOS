@@ -15,6 +15,18 @@
     {
       "name": "server_description",
       "value": "hap sample empty service"
+    },
+    {
+      "name": "entry_AccessAbility",
+      "value": "entry_AccessAbility"
+    },
+    {
+      "name": "accessability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "accessability_HelloWorld",
+      "value": "Hello World"
     }
   ]
 }
