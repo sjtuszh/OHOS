@@ -6,14 +6,28 @@
     ohos:alignment="center"
     ohos:orientation="vertical">
 
-    <Text
-        ohos:id="$+id:text_helloworld"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_access"
-        ohos:layout_alignment="horizontal_center"
-        ohos:text="$string:accessability_HelloWorld"
-        ohos:text_size="40vp"
+    <Button
+        ohos:id="$+id:login_room_btn"
+        ohos:height="100vp"
+        ohos:width="200vp"
+        ohos:text="加入房间"
+        ohos:background_element="#888888"
+        ohos:text_size="25fp"
+        ohos:margin="6vp"
+        ohos:shadow_color="#FF7B7E7E"
+        ohos:hint_color="#FFAB0C2B"
+        />
+
+    <Button
+        ohos:id="$+id:back_btn"
+        ohos:height="100vp"
+        ohos:width="200vp"
+        ohos:text="退回"
+        ohos:background_element="#888888"
+        ohos:text_size="25fp"
+        ohos:margin="6vp"
+        ohos:shadow_color="#FF7B7E7E"
+        ohos:hint_color="#FFAB0C2B"
         />
 
 </DirectionalLayout>

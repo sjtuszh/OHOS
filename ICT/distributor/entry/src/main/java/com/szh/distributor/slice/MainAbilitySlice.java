@@ -27,6 +27,9 @@ public class MainAbilitySlice extends AbilitySlice {
     private DirectionalLayout dl_Apps;
     private DirectionalLayout dl_Profiles;
 
+    //Button 云体感
+    Button yun_btn;
+
 
     @Override
     public void onStart(Intent intent) {
@@ -135,6 +138,11 @@ public class MainAbilitySlice extends AbilitySlice {
             public void onReselected(TabList.Tab tab) {
 
             }
+        });
+        //云体感按钮进入加入游戏页面
+        yun_btn  = (Button) findComponentById(ResourceTable.Id_tigan_cloud_btn);
+        yun_btn.setClickedListener((Component component) ->{
+                present(new AccessAbilitySlice(),new Intent());
         });
 
 
