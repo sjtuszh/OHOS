@@ -9,6 +9,18 @@
   },
   "deviceConfig": {},
   "module": {
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC",
+        "reason": "need",
+        "usedScene": {
+          "ability": [
+            "MainAbility"
+          ],
+          "when": "inuse"
+        }
+      }
+    ],
     "package": "com.szh.distributor",
     "name": ".MyApplication",
     "mainAbility": "com.szh.distributor.MainAbility",

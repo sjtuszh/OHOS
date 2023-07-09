@@ -13,4 +13,17 @@
         ohos:text="Devices"
         ohos:text_size="30vp"/>
 
+
+    <Button
+        ohos:width="150vp"
+        ohos:height="50vp"
+        ohos:text_size="27fp"
+        ohos:text="button"
+        ohos:background_element="$graphic:color_blue_element"
+        ohos:left_margin="15vp"
+        ohos:bottom_margin="15vp"
+        ohos:right_padding="8vp"
+        ohos:left_padding="8vp"
+        />
+
 </DirectionalLayout>
