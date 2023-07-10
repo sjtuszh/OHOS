@@ -15,7 +15,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import ohos.rpc.RemoteException;
 
 public class AccessAbilitySlice extends AbilitySlice {
-    private static final int DOMAIN_ID = 0xD000F00;
+    private static final int DOMAIN_ID = 0x00101;
     private static final HiLogLabel accessABILITY_SLICE = new HiLogLabel(3, DOMAIN_ID, "MainAbilitySlice");
     Button login_btn;
     Button back_btn;
@@ -32,7 +32,7 @@ public class AccessAbilitySlice extends AbilitySlice {
     // 当前应用包名
     private String BUNDLE_NAME = "com.szh.distributor";
     // 流转应用包名
-    private String REMOTE_BUNDLE_NAME = "com.szh.distributor";
+    private String REMOTE_BUNDLE_NAME = "com.szh.p3D";
     // 流转FA名称
     private String REMOTE_FA_NAME = "com.szh.p3D.MainAbility";
     // 流转PA名称
@@ -150,8 +150,9 @@ public class AccessAbilitySlice extends AbilitySlice {
             ExtraParams params = new ExtraParams();
             String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
             params.setDevType(devTypes);
-            String jsonParams = "{'filter':{'commonFilter':{'system':{'harmonyVersion':'2.0.0'},'groupType':'1|256','curComType': 0x00030004,'faFilter':'{\"localVersionCode\":1,\"localMinCompatibleVersionCode\":2,\"targetBundleName\": \"com.szh.distributor\"}'}},'transferScene':0,'remoteAuthenticationDescription': '拉起HiVision扫描弹框描述','remoteAuthenticationPicture':''}";
-            params.setJsonParams(jsonParams);
+
+//            String jsonParams = "{'filter':{'commonFilter':{'system':{'harmonyVersion':'3.0.0'},'groupType':'1|256','curComType': 0x00030004,'faFilter':'{\"localVersionCode\":1,\"localMinCompatibleVersionCode\":2,\"targetBundleName\": \"com.szh.distributor\"}'}},'transferScene':0,'remoteAuthenticationDescription': '拉起HiVision扫描弹框描述','remoteAuthenticationPicture':''}";
+//            params.setJsonParams(jsonParams);
             continuationRegisterManager.register(BUNDLE_NAME, params, callback, requestCallback);
         }
     };
@@ -164,8 +165,9 @@ public class AccessAbilitySlice extends AbilitySlice {
             ExtraParams params = new ExtraParams();
             String[] devTypes = new String[]{ExtraParams.DEVICETYPE_SMART_PAD, ExtraParams.DEVICETYPE_SMART_PHONE};
             params.setDevType(devTypes);
-            String jsonParams = "{'filter':{'commonFilter':{'system':{'harmonyVersion':'2.0.0'},'groupType':'1|256','curComType': 0x00030004,'faFilter':'{\"localVersionCode\":1,\"localMinCompatibleVersionCode\":2,\"targetBundleName\": \"com.szh.distributor\"}'}},'transferScene':0,'remoteAuthenticationDescription': '拉起HiVision扫描弹框描述','remoteAuthenticationPicture':''}";
-            params.setJsonParams(jsonParams);
+
+//            String jsonParams = "{'filter':{'commonFilter':{'system':{'harmonyVersion':'3.0.0'},'groupType':'1|256','curComType': 0x00030004,'faFilter':'{\"localVersionCode\":1,\"localMinCompatibleVersionCode\":2,\"targetBundleName\": \"com.szh.distributor\"}'}},'transferScene':0,'remoteAuthenticationDescription': '拉起HiVision扫描弹框描述','remoteAuthenticationPicture':''}";
+//            params.setJsonParams(jsonParams);
             // 显示选择设备列表
             continuationRegisterManager.showDeviceList(abilityToken, params, null);
         }
