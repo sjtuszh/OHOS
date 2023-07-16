@@ -9,6 +9,7 @@
   },
   "deviceConfig": {},
   "module": {
+    "reqPermissions": [{"name": "ohos.permission.KEEP_BACKGROUND_RUNNING"}],
     "package": "com.szh.p3D",
     "name": ".MyApplication",
     "mainAbility": "com.szh.p3D.MainAbility",
@@ -45,6 +46,24 @@
         "label": "$string:entry_MainAbility",
         "type": "page",
         "launchType": "standard"
+      },
+      {
+        "name": "com.szh.p3D.UsrServiceAbility",
+        "visible": true,
+        "description": "$string:usrserviceability_description",
+        "type": "service",
+        "backgroundModes": [
+          "dataTransfer",
+          "audioPlayback",
+          "audioRecording",
+          "pictureInPicture",
+          "voip",
+          "location",
+          "bluetoothInteraction",
+          "wifiInteraction",
+          "multiDeviceConnection"
+        ],
+        "icon": "$media:icon"
       }
     ]
   }

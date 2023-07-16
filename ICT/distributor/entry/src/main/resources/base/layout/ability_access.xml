@@ -7,10 +7,34 @@
     ohos:orientation="vertical">
 
     <Button
-        ohos:id="$+id:login_room_btn"
+        ohos:id="$+id:device_btn"
         ohos:height="100vp"
         ohos:width="200vp"
-        ohos:text="加入房间"
+        ohos:text="寻找TV端"
+        ohos:background_element="#888888"
+        ohos:text_size="25fp"
+        ohos:margin="6vp"
+        ohos:shadow_color="#FF7B7E7E"
+        ohos:hint_color="#FFAB0C2B"
+        />
+
+    <Button
+        ohos:id="$+id:start_btn"
+        ohos:height="100vp"
+        ohos:width="200vp"
+        ohos:text="startService"
+        ohos:background_element="#888888"
+        ohos:text_size="25fp"
+        ohos:margin="6vp"
+        ohos:shadow_color="#FF7B7E7E"
+        ohos:hint_color="#FFAB0C2B"
+        />
+
+    <Button
+        ohos:id="$+id:connect_btn"
+        ohos:height="100vp"
+        ohos:width="200vp"
+        ohos:text="连接房间"
         ohos:background_element="#888888"
         ohos:text_size="25fp"
         ohos:margin="6vp"
@@ -29,5 +53,6 @@
         ohos:shadow_color="#FF7B7E7E"
         ohos:hint_color="#FFAB0C2B"
         />
+
 
 </DirectionalLayout>

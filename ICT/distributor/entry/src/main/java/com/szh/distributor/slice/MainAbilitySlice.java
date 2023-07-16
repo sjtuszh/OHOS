@@ -5,15 +5,13 @@ import com.szh.distributor.components.AppsItem;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
-import ohos.agp.render.opengl.Utils;
-import ohos.agp.utils.TextAlignment;
 import ohos.hiviewdfx.HiLog;
 import ohos.hiviewdfx.HiLogLabel;
 
 import java.util.ArrayList;
 
 public class MainAbilitySlice extends AbilitySlice {
-    static final HiLogLabel ability = new HiLogLabel(HiLog.LOG_APP, 0x00201, "MainAbilitySlice");
+    private static final HiLogLabel ability = new HiLogLabel(HiLog.LOG_APP, 0x00101, "MainAbilitySlice");
     private TabList mtabList;
     
 
@@ -35,6 +33,10 @@ public class MainAbilitySlice extends AbilitySlice {
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
+        HiLog.info(ability,"测试mainAbility Hilog");
+
+        requestPermissionsFromUser(
+                new String[]{"ohos.permission.DISTRIBUTED_DATASYNC"}, 0);
 
 
         //三种布局
