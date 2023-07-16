@@ -44,9 +44,10 @@ public class UsrServiceAbility extends Ability {
 
     @Override
     public IRemoteObject onConnect(Intent intent) {
+        super.onConnect(intent);
 
         Utils.log(String.format("Usr连接"+intent.getStringParam("distributorINFO")));
-        Utils.log("onConnect");
+        Utils.showToast(getContext(),"onConnect");
         UsrRemote remote_plus = new UsrRemote();
 
         return remote_plus;
@@ -57,7 +58,12 @@ public class UsrServiceAbility extends Ability {
     public void onDisconnect(Intent intent) {
     }
 
-    public class UsrRemote extends LocalRemoteObject{
+    public class UsrRemote extends RemoteObject{
+        private static final String DESCRIPTOR = "com.szh.DESCRIPTOR";
+        public UsrRemote() {
+            super(DESCRIPTOR);
+        }
+
         public void UsrRemote(){
             Utils.log("myremote创建");
         }

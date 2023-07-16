@@ -5,13 +5,13 @@ apply plugin: 'com.huawei.ohos.app'
 ohos {
     signingConfigs {
         debug {
-            storeFile file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_70086000176223007.p12')
-            storePassword '000000187CA7A56ED2A373C9AA804056BA8A507940BCAC80BF7ED0F877EADFAB07CEFBB2E4160D57'
+            storeFile file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_com.szh.distributor_70086000176223007.p12')
+            storePassword '0000001AA001C3EFEF1407E95A556E1C58279D450FF70C6E41B5BE4A281FAC8F10267EF1D9D4302ABC49'
             keyAlias = 'debugKey'
-            keyPassword '0000001811A31FF3ACA69FE28269E8148F43D1C540BAEAB6C95D13DE857D07D4BB35F32003721F08'
+            keyPassword '0000001A4F13CF4C355429F5F46F6DC8005560BA2F5BF7F2DCAF5DD2FEED21632D9DC4C0FD54F5ECCB00'
             signAlg = 'SHA256withECDSA'
-            profile file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_70086000176223007.p7b')
-            certpath file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_70086000176223007.cer')
+            profile file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_com.szh.distributor_70086000176223007.p7b')
+            certpath file('C:\\Users\\MSI-NB\\.ohos\\config\\auto_debug_distributor_com.szh.distributor_70086000176223007.cer')
         }
     }
     compileSdkVersion 7

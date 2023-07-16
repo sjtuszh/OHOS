@@ -65,7 +65,7 @@ public class MainAbilitySlice extends AbilitySlice {
         @Override
         public void onClick(Component arg0) {
             Intent intentconnectUsr = new Intent();
-            intentconnectUsr.setParam("distributorINFO","这是distributor传过来的intent");
+            intentconnectUsr.setParam("distributorINFO","这是p3D传过来的intent");
             Operation operation = new Intent.OperationBuilder()
                     .withDeviceId("")
                     .withBundleName("com.szh.p3D")
