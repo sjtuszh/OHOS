@@ -35,6 +35,7 @@ public class MainAbilitySlice extends AbilitySlice {
         super.setUIContent(ResourceTable.Layout_ability_main);
         HiLog.info(ability,"测试mainAbility Hilog");
 
+
         requestPermissionsFromUser(
                 new String[]{"ohos.permission.DISTRIBUTED_DATASYNC"}, 0);
 
